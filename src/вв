@@ -1,0 +1,87 @@
+ <header className="fixed w-full top-0 z-50 px-4 md:px-8 py-4">
+        <motion.nav
+          initial={{ y: -100 }}
+          animate={{ y: 0 }}
+          className={`mx-auto max-w-7xl px-3 py-2 rounded-3xl ${THEME.colors.glass} flex justify-between items-center shadow-lg shadow-black/5`}
+        >
+          <div className="flex items-center gap-2">
+          <img
+  src={logo}
+  alt="Гармония жизни"
+  className="w-25 h-25 object-contain"
+/>
+           
+          </div>
+
+          <div className="hidden md:flex items-center gap-8 font-medium">
+            <a href="#services" className="hover:text-[#7FB069] transition-colors">Услуги</a>
+            <a href="#gallery" className="hover:text-[#7FB069] transition-colors">Галерея</a>
+            <a href="#about" className="hover:text-[#7FB069] transition-colors">О нас</a>
+            <a 
+              href="tel:87711382025" 
+              className="bg-[#7FB069] text-white px-6 py-2 rounded-2xl hover:bg-[#6A9A56] transition-all shadow-md shadow-[#7FB069]/20"
+            >
+              8 771 138 20 25
+            </a>
+          </div>
+
+          <button className="md:hidden" onClick={() => setIsMenuOpen(true)}>
+            <Menu />
+          </button>
+        </motion.nav>
+      </header>
+
+
+
+
+        <section className="relative h-screen flex items-center overflow-hidden pt-20">
+        <div className="absolute inset-0 z-0">
+          <motion.div 
+            initial={{ scale: 1.1 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 10, repeat: Infinity, repeatType: "reverse" }}
+            className="absolute inset-0 bg-[url('public/back.png')] bg-cover bg-center"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/70 to-transparent" />
+        </div>
+
+        <div className="container mx-auto px-6 relative z-10 flex flex-col md:flex-row items-center justify-between gap-12">
+          <div className="max-w-2xl">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h1 className="text-5xl md:text-7xl font-black text-slate-900 mb-4 leading-tight">
+                Гармония <br />
+                <span className="text-[#7FB069]">жизни</span>
+              </h1>
+              <h2 className="text-2xl md:text-3xl font-medium text-slate-600 mb-6 italic">
+                «Мы дарим спокойствие»
+              </h2>
+              <p className="text-lg text-slate-500 mb-8 leading-relaxed max-w-lg">
+                Место, где каждый пожилой человек чувствует себя нужным, любимым и защищённым. 
+                Домашний уют, забота и профессиональный медицинский уход в одном месте.
+              </p>
+              
+              <div className="flex flex-wrap gap-4">
+                <button className="bg-[#7FB069] text-white px-8 py-4 rounded-2xl font-bold text-lg hover:scale-105 active:scale-95 transition-all shadow-xl shadow-[#7FB069]/30">
+                  Связаться с нами
+                </button>
+                <button className="bg-white/80 backdrop-blur-sm border border-slate-200 text-slate-700 px-8 py-4 rounded-2xl font-bold text-lg hover:bg-slate-50 transition-all shadow-lg">
+                  Посмотреть комнаты
+                </button>
+              </div>
+
+              <div className="mt-8 flex items-center gap-3 text-slate-600 font-semibold">
+                <div className="w-12 h-12 bg-[#D4AF37]/10 flex items-center justify-center rounded-full text-[#D4AF37]">
+                  <Phone size={24} />
+                </div>
+                <a href="tel:87711382025" className="text-2xl hover:text-[#7FB069] transition-colors">8 771 138 20 25</a>
+              </div>
+            </motion.div>
+          </div>
+
+
+        </div>
+      </section>
