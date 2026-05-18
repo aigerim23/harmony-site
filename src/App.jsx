@@ -40,9 +40,7 @@ const SERVICES = [
   { icon: Activity, title: "Программа реабилитации", desc: "После операции: сердце, замена сустава, инсульта, восстановление движения конечностей" },
   { icon: Stethoscope, title: "Медицинские процедуры", desc: "Квалифицированный медицинский уход и манипуляции" },
   { icon: UserCheck, title: "Наблюдение терапевта", desc: "Регулярный мониторинг состояния здоровья врачом" },
-  { icon: Heart, title: "Занятия с логопедом", desc: "Индивидуальные коррекционные занятия по речи" },
   { icon: Activity, title: "ЛФК", desc: "Лечебная физическая культура для восстановления" },
-  { icon: Home, title: "Регистрация при ПМЖ", desc: "Возможность зарегистрироваться в местную поликлинику" },
   { icon: Utensils, title: "4-разовое питание", desc: "Сбалансированное и полноценное меню" },
   { icon: Sparkles, title: "Уборка комнат", desc: "Влажная уборка жилой комнаты 4 раза в день" },
   { icon: Bath, title: "Ванные процедуры", desc: "Помощь в принятии душа и ванны" },
@@ -57,18 +55,18 @@ const SERVICES = [
   { icon: Sparkles, title: "Массаж", desc: "Профессиональный оздоровительный массаж" },
 ];
 
-const ROOMS = [ { url: "/public/1.jpeg", title: "Уютные комнаты" }, 
-  { url: "/public/2.jpeg", title: "Комфортная атмосфера" }, 
-  { url: "/public/3.jpeg", title: "Домашний уют" },
-   { url: "/public/4.jpeg", title: "Современный уход" }, 
-   { url: "/public/5.jpeg", title: "Современный уход" }, 
-   { url: "/public/6.jpeg", title: "Современный уход" }, 
-   { url: "/public/7.jpeg", title: "Современный уход" }, 
-   { url: "/public/8.jpeg", title: "Современный уход" }, 
-   { url: "/public/10.jpeg", title: "Современный уход" }, 
-   { url: "/public/11.jpeg", title: "Современный уход" }, 
-   { url: "/public/12.jpeg", title: "Современный уход" }, 
-   { url: "/public/13.jpeg", title: "Современный уход" }, ];
+const ROOMS = [ { url: "/1.jpeg", title: "Уютные комнаты" }, 
+  { url: "/2.jpeg", title: "Комфортная атмосфера" }, 
+  { url: "/3.jpeg", title: "Домашний уют" },
+   { url: "/4.jpeg", title: "Современный уход" }, 
+   { url: "/5.jpeg", title: "Домашний уют" }, 
+   { url: "/6.jpeg", title: "Современный уход" }, 
+   { url: "/7.jpeg", title: "Домашний уют" }, 
+   { url: "/8.jpeg", title: "Современный уход" }, 
+   { url: "/10.jpeg", title: "Домашний уют" }, 
+   { url: "/11.jpeg", title: "Современный уход" }, 
+   { url: "/12.jpeg", title: "Домашний уют" }, 
+   { url: "/13.jpeg", title: "Современный уход" }, ];
 
 const SectionTitle = ({ children, subtitle }) => (
   <div className="text-center mb-16 px-4">
@@ -173,7 +171,7 @@ export default function App() {
           animate={{ y: 0 }}
           className={`mx-auto max-w-7xl px-3 py-2 rounded-3xl ${THEME.colors.glass} flex justify-between items-center shadow-lg shadow-black/5`}
         >
-          <div className="flex items-center gap-2">
+          <div className="hidden md:flex items-center gap-2">
           <img
   src={logo}
   alt="Гармония жизни"
@@ -190,7 +188,7 @@ export default function App() {
               href="tel:87711382025" 
               className="bg-[#7FB069] text-white px-6 py-2 rounded-2xl hover:bg-[#6A9A56] transition-all shadow-md shadow-[#7FB069]/20"
             >
-              8 771 138 20 25
+              8 747 670 80 25
             </a>
           </div>
 
@@ -207,7 +205,7 @@ export default function App() {
             initial={{ scale: 1.1 }}
             animate={{ scale: 1 }}
             transition={{ duration: 10, repeat: Infinity, repeatType: "reverse" }}
-            className="absolute inset-0 bg-[url('public/back.png')] bg-cover bg-center"
+            className="absolute inset-0 bg-[url('/back.png')] bg-cover bg-center"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/70 to-transparent" />
         </div>
@@ -226,9 +224,8 @@ export default function App() {
               <h2 className="text-2xl md:text-3xl font-medium text-slate-600 mb-6 italic">
                 «Мы дарим спокойствие»
               </h2>
-              <p className="text-lg text-slate-500 mb-8 leading-relaxed max-w-lg">
-                Место, где каждый пожилой человек чувствует себя нужным, любимым и защищённым. 
-                Домашний уют, забота и профессиональный медицинский уход в одном месте.
+              <p className="text-lg text-slate-500 mb-8 leading-relaxed max-w-2lg">
+Наш дом престарелых расположен недалеко от города — в тихом, уютном месте с чистым воздухом и спокойной атмосферой. Небольшое количество постояльцев позволяет нам уделять каждому максимум внимания, заботы и тепла, создавая по-настоящему домашнюю обстановку. Мы формируем комфортную среду, где каждый чувствует себя в безопасности, окружённым уважением, заботой и качественным уходом.
               </p>
               
               <div className="flex flex-wrap gap-4">
@@ -244,7 +241,7 @@ export default function App() {
                 <div className="w-12 h-12 bg-[#D4AF37]/10 flex items-center justify-center rounded-full text-[#D4AF37]">
                   <Phone size={24} />
                 </div>
-                <a href="tel:87711382025" className="text-2xl hover:text-[#7FB069] transition-colors">8 771 138 20 25</a>
+                <a href="tel:87711382025" className="text-2xl hover:text-[#7FB069] transition-colors">8 747 670 80 25</a>
               </div>
             </motion.div>
           </div>
@@ -346,8 +343,11 @@ export default function App() {
                  <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-8 leading-tight">
                    Почему семьи <br /> доверяют нам?
                  </h2>
+              
                  <div className="space-y-6">
                    {[
+                    { title: "Наш дом престарелых расположен недалеко от города,", desc: "в тихом и уютном месте с чистым воздухом;", icon: Home },
+                     { title: "Наш дом престарелых рассчитан на небольшое количество постояльцев, ", desc: "что позволяет создать уютную домашнюю атмосферу и обеспечить каждому качественный уход и душевное тепло.", icon: Users },
                      { title: "Забота 24/7", desc: "Круглосуточное наблюдение и помощь в любую минуту.", icon: Clock },
                      { title: "Опытный персонал", desc: "Медицинские работники со стажем более 10 лет.", icon: CheckCircle2 },
                      { title: "Реабилитация", desc: "Специальные условия для восстановления после операций.", icon: Activity }
@@ -403,7 +403,7 @@ export default function App() {
              <a href="tel:87711382025" className="bg-[#7FB069] px-8 py-4 rounded-2xl font-bold flex items-center justify-center gap-2 w-full">
                 <Phone size={20} /> Позвонить
               </a>
-             <a href="https://wa.me/87711382025" className="bg-green-500 px-8 py-4 rounded-2xl font-bold flex items-center justify-center gap-2 w-full">
+             <a href="https://wa.me/87476708025" className="bg-green-500 px-8 py-4 rounded-2xl font-bold flex items-center justify-center gap-2 w-full">
                 <MessageCircle size={20} /> WhatsApp
               </a>
             </div>
@@ -427,15 +427,15 @@ export default function App() {
               <div className="space-y-4 mb-8">
                 <div className="flex items-start gap-3">
                   <MapPin className="text-[#7FB069] mt-1" size={20} />
-                  <p>г. Алматы, ул. Валиханова, д. 43</p>
+                  <p>​с. Бесагаш, Талгарский район, Алматинская область</p>
                 </div>
                 <div className="flex items-start gap-3">
                   <Phone className="text-[#7FB069] mt-1" size={20} />
-                  <p className="text-xl font-bold">8 771 138 20 25</p>
+                  <p className="text-xl font-bold">8 747 670 80 25 , 8 707 443 43 13 </p>
                 </div>
               </div>
               
-              <a href="https://go.2gis.com/uPYqg" target="_blank" className="inline-flex items-center gap-2 bg-[#00AAFF] text-white px-6 py-3 rounded-xl font-bold">
+              <a href="https://2gis.kz/almaty/gallery/geo/70030076187613251/photoId/30258560071009728" target="_blank" className="inline-flex items-center gap-2 bg-[#00AAFF] text-white px-6 py-3 rounded-xl font-bold">
                 <Navigation size={18} /> Открыть в 2ГИС
               </a>
             </div>
@@ -450,7 +450,7 @@ export default function App() {
             </div>
           </div>
           <div className="pt-8 border-t border-slate-200 text-center text-slate-400 text-sm">
-            © 2024 «Гармония жизни». Все права защищены.
+            © 2026 «Гармония жизни». Все права защищены.
           </div>
         </div>
       </footer>
@@ -478,7 +478,7 @@ export default function App() {
     )}
   </AnimatePresence>
   
-  <a href="https://wa.me/87711382025" className="w-14 h-14 bg-green-500 shadow-xl rounded-full flex items-center justify-center text-white">
+  <a href="https://wa.me/87476708025" className="w-14 h-14 bg-green-500 shadow-xl rounded-full flex items-center justify-center text-white">
     <MessageCircle size={28} />
   </a>
 </div>
@@ -494,15 +494,20 @@ export default function App() {
                 initial={{ x: 300 }} animate={{ x: 0 }} exit={{ x: 300 }}
                 className="w-72 bg-white h-full p-8 flex flex-col shadow-2xl"
              >
+                {/* LOGO */}
+  <div className="mb-8 flex justify-center">
+    <img src={logo} alt="logo" className="w-24 h-auto object-contain" />
+  </div>
                 <div className="flex justify-end mb-8">
                    <button onClick={() => setIsMenuOpen(false)} className="p-2 bg-slate-100 rounded-lg"><X /></button>
                 </div>
                 <div className="flex flex-col gap-6 text-xl font-bold">
+
                    <a href="#services" onClick={() => setIsMenuOpen(false)}>Услуги</a>
                    <a href="#gallery" onClick={() => setIsMenuOpen(false)}>Галерея</a>
                    <a href="#about" onClick={() => setIsMenuOpen(false)}>О нас</a>
                    <div className="h-px bg-slate-100" />
-                   <a href="tel:87711382025" className="text-[#7FB069]">8 771 138 20 25</a>
+                   <a href="tel:87476708025" className="text-[#7FB069]">8 747 670 80 25 </a>
                 </div>
              </motion.div>
           </motion.div>
